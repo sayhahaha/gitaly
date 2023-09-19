@@ -396,6 +396,7 @@ func (parser *Parser) handleTypeChangeDiff() {
 	parser.rawLines = append([][]byte{[]byte(newRawLine)}, parser.rawLines...)
 }
 
+// test by xxh 2
 func parseRawLine(objectHash git.ObjectHash, line []byte, diff *Diff) error {
 	var regexp *regexp.Regexp
 	switch objectHash.Format {
