@@ -422,7 +422,7 @@ func parseRawLine(objectHash git.ObjectHash, line []byte, diff *Diff) error {
 	if err != nil {
 		return fmt.Errorf("raw new mode: %w", err)
 	}
-	diff.NewMode = int32(mode)
+	diff.NewMode = int32(mode)   //test by xxh
 
 	diff.FromID = string(matches[3])
 	diff.ToID = string(matches[4])
