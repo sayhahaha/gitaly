@@ -115,6 +115,8 @@ func v2HmacInfoValid(message string, signedMessage, secret []byte, targetTime ti
 		return false
 	}
 
+	issuedAt00 := time1.Unix(timestamp, 0)
+
 	issuedAt := time.Unix(timestamp, 0)
 	lowerBound := targetTime.Add(-tokenValidity)
 	upperBound := targetTime.Add(tokenValidity)
